@@ -1,35 +1,17 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"math"
-	"os"
-	"strconv"
-	"strings"
+
+	"cistercian.org/techinar/keyboard"
 )
-
-// Read in a float64 number
-func getFloat() (float64, error) {
-	reader := bufio.NewReader(os.Stdin)
-	input, err := reader.ReadString('\n')
-	if err != nil {
-		return 0, err
-	}
-
-	input = strings.TrimSpace(input)
-	number, err := strconv.ParseFloat(input, 64)
-	if err != nil {
-		return 0, err
-	}
-	return number, nil
-}
 
 // Read in a positive float64 number and handle all errors.
 func getFloatPositive(prompt string) float64 {
 	for {
 		fmt.Print(prompt)
-		number, err := getFloat()
+		number, err := keyboard.GetFloat()
 		if number <= 0 || err != nil {
 			fmt.Println("Please enter a positive, floating point number.")
 		} else {
