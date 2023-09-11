@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"cistercian.org/techinar/keyboard"
+	"techinar/keyboard"
 )
 
 // Read in a positive float64 number and handle all errors.

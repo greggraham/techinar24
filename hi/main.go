@@ -1,6 +1,6 @@
 package main
 
-import "cistercian.org/techinar/greeting"
+import "techinar/greeting"
 
 func main() {
 	greeting.Hello()

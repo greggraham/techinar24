@@ -1,3 +1,3 @@
-module cistercian.org/techinar
+module techinar
 
 go 1.19

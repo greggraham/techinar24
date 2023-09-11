@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"cistercian.org/techinar/keyboard"
+	"techinar/keyboard"
 )
 
 func main() {
