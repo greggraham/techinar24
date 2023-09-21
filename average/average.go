@@ -3,10 +3,15 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"techinar/datafile"
 )
 
 func main() {
-	numbers := [5]float64{71.8, 56.2, 89.5, 98.6, 80.0}
+	numbers, err := datafile.GetFloats("data.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
 	var sum float64 = 0
 	for _, number := range numbers {
 		sum += number
