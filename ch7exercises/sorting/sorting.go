@@ -1,9 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"log"
-
-	"github.com/headfirstgo/datafile"
+	"sort"
+	"techinar/datafile"
 )
 
 func main() {
@@ -21,4 +22,12 @@ func main() {
 	// Loop through the names in the sorted slice, and
 	// print the name and the corresponding count from
 	// the map.
+	var names []string
+	for name := range counts {
+		names = append(names, name)
+	}
+	sort.Strings(names)
+	for _, name := range names {
+		fmt.Printf("%-20s : %3d\n", name, counts[name])
+	}
 }
