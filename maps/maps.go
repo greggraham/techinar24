@@ -6,6 +6,8 @@ import (
 
 func main() {
 	var authors map[string]string = map[string]string{"The Lord of the Rings": "J. R. R. Tolkien", "Mere Christianity": "C. S. Lewis"}
+	authors["Marcovaldo"] = "Calvino"
+	authors["Platero y yo"] = "Gimenez"
 
 	for title, author := range authors {
 		fmt.Printf("%25s : %s\n", title, author)
@@ -25,6 +27,7 @@ func main() {
 	fmt.Println("----------------------------------------")
 
 	macros := map[string]string{"chicken": "protein", "avocado": "fat", "apple": "carb", "rice": "carb"}
+	delete(macros, "rice")
 	for food, macro := range macros {
 		fmt.Printf("%-20s : %s\n", food, macro)
 	}
