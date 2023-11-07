@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"techinar/calendar"
+	"techinar/archive/calendar"
 )
 
 func main() {
