@@ -32,7 +32,7 @@ func (p *Player) Attack(op *Player) bool {
 			fmt.Printf("Remaining health for %s is %d.\n", op.name, op.health)
 			return true
 		} else {
-			fmt.Println(op.name, "died.")
+			fmt.Printf("%s died.\n\n", op.name)
 			return false
 		}
 	} else {
