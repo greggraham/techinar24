@@ -43,7 +43,7 @@ func (p *Character) Attack(op Combatant) bool {
 			fmt.Printf("Remaining health for %s is %d.\n", op.Name(), op.Health())
 			return true
 		} else {
-			fmt.Println(op.Name(), "died.")
+			fmt.Printf("%s died.\n\n", op.Name())
 			return false
 		}
 	} else {
