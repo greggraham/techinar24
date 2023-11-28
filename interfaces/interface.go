@@ -27,9 +27,13 @@ func (m MyType) MethodNotInInterface() {
 }
 
 func main() {
-	var value MyInterface
-	value = MyType(5)
+	var value MyInterface = MyType(5)
 	value.MethodWithoutParameters()
 	value.MethodWithParameter(127.3)
 	fmt.Println(value.MethodWithReturnValue())
+
+	value2, ok := value.(MyType)
+	if ok {
+		value2.MethodNotInInterface()
+	}
 }
