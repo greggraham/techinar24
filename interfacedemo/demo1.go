@@ -1,12 +1,9 @@
 package main
 
-import "fmt"
-
-type MyInterface interface {
-	MethodWithoutParameters()
-	MethodWithParameter(float64)
-	MethodWithReturnValue() string
-}
+import (
+	"fmt"
+	"techinar/interfaces"
+)
 
 type MyType int
 
@@ -26,8 +23,8 @@ func (m MyType) MethodNotInInterface() {
 	fmt.Println("MethodNotInInterface called")
 }
 
-func main() {
-	var value MyInterface
+func demo1() {
+	var value interfaces.MyInterface
 	value = MyType(5)
 	value.MethodWithoutParameters()
 	value.MethodWithParameter(127.3)
